@@ -13,6 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public enum  ResultBeanEnum implements ResultCode{
 
+    // ==================通用==========================
     /**
      * 成功
      */
@@ -21,7 +22,11 @@ public enum  ResultBeanEnum implements ResultCode{
     /**
      * 失败
      */
-    ERROR(500,"服务异常");
+    ERROR(500,"服务异常"),
+
+    // ==================登录模块==========================
+    LOGIN_ERROR(500210,"用户名或免密不正确"),
+    MOBILE_ERROR(500211,"手机号格式不正确");
 
     private final Integer code;
     private final String message;

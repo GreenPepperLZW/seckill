@@ -2,6 +2,7 @@ package com.lzw.seckill.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -18,7 +19,7 @@ public class DemoController {
      * @param model
      * @return
      */
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String test(Model model) {
         model.addAttribute("name", "张三");
         return "hello";

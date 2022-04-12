@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since : 1.0
  */
 @SpringBootApplication
-@MapperScan("com.lzw.seckill.pojo")
+@MapperScan("com.lzw.seckill.mapper")
 public class SeckillApplication {
 
     public static void main(String[] args) {

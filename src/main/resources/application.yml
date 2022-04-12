@@ -24,6 +24,8 @@ spring:
       connection-timeout: 30000
       # 测试连接是否可用的查询语句
       connection-test-query: SELECT 1
+  resources:
+    static-locations: classpath:/static/
 
 mybatis-plus:
 #  config-location: classpath*:/mapper/*Mpper.xml
