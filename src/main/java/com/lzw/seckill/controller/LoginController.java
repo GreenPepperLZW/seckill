@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
+
 /**
  * 登录
  * @author : lzw
@@ -43,7 +45,7 @@ public class LoginController {
 
     @ResponseBody
     @PostMapping("/doLogin")
-    public ResultBean doLogin(@ApiParam(value = "请求参数",required = true) LoginVo loginVo) {
+    public ResultBean doLogin(@Valid @ApiParam(value = "请求参数",required = true) LoginVo loginVo) {
 
         return userService.doLogin(loginVo);
     }
